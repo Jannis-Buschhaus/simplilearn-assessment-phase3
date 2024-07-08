@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CabFareControllerTest" project="CabFare" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="com.controller.CabFareControllerTest" time="0.112" displayname="CabFareControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.controller.CabFareControllerTest]">
-    <testcase name="testFarePrice" classname="com.controller.CabFareControllerTest" time="0.077" displayname="testFarePrice()" uniqueid="[engine:junit-jupiter]/[class:com.controller.CabFareControllerTest]/[method:testFarePrice()]"/>
-    <testcase name="testGetCabFares" classname="com.controller.CabFareControllerTest" time="0.009" displayname="testGetCabFares()" uniqueid="[engine:junit-jupiter]/[class:com.controller.CabFareControllerTest]/[method:testGetCabFares()]"/>
-    <testcase name="testGetCabTypes" classname="com.controller.CabFareControllerTest" time="0.008" displayname="testGetCabTypes()" uniqueid="[engine:junit-jupiter]/[class:com.controller.CabFareControllerTest]/[method:testGetCabTypes()]"/>
-    <testcase name="testFactor" classname="com.controller.CabFareControllerTest" time="0.006" displayname="testFactor()" uniqueid="[engine:junit-jupiter]/[class:com.controller.CabFareControllerTest]/[method:testFactor()]"/>
-  </testsuite>
-</testrun>
