@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 7 elements from project &apos;EurekaServer&apos;&#x0A;- Original project: &apos;EurekaServer&apos;&#x0A;- Original elements:&#x0A;     generated-sources&#x0A;     generated-test-sources&#x0A;     maven-archiver&#x0A;     maven-status&#x0A;     surefire-reports&#x0A;     EurekaServer-0.0.1-SNAPSHOT.jar&#x0A;     EurekaServer-0.0.1-SNAPSHOT.jar.original" description="Delete elements" element1="target/EurekaServer-0.0.1-SNAPSHOT.jar" element2="target/maven-status" element3="target/generated-sources" element4="target/surefire-reports" element5="target/generated-test-sources" element6="target/EurekaServer-0.0.1-SNAPSHOT.jar.original" element7="target/maven-archiver" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="7" stamp="1720456223218" subPackages="false" version="1.0"/>
+</session>
