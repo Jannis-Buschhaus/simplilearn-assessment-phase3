@@ -4,7 +4,9 @@ use travel_app;
 
 show tables;
 
+describe booking;
 select * from booking;
+truncate table booking;
 
 describe type_of_cab;
 insert into type_of_cab values(0, "Small", 0.8);
