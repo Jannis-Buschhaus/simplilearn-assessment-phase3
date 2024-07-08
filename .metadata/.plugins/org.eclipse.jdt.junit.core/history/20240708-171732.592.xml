@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BookingControllerTest" project="BookingService" tests="7" started="7" failures="0" errors="0" ignored="6">
+  <testsuite name="com.controller.BookingControllerTest" time="0.091" displayname="BookingControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]">
+    <testcase name="testPlaceBooking" classname="com.controller.BookingControllerTest" time="0.0" ignored="true" displayname="testPlaceBooking()" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]/[method:testPlaceBooking()]"/>
+    <testcase name="testListBookingsPost" classname="com.controller.BookingControllerTest" time="0.0" ignored="true" displayname="testListBookingsPost()" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]/[method:testListBookingsPost()]"/>
+    <testcase name="testBookingForm" classname="com.controller.BookingControllerTest" time="0.0" ignored="true" displayname="testBookingForm()" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]/[method:testBookingForm()]"/>
+    <testcase name="testListBookings" classname="com.controller.BookingControllerTest" time="0.0" ignored="true" displayname="testListBookings()" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]/[method:testListBookings()]"/>
+    <testcase name="testWelcome" classname="com.controller.BookingControllerTest" time="0.057" displayname="testWelcome()" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]/[method:testWelcome()]"/>
+    <testcase name="testCalculateFare" classname="com.controller.BookingControllerTest" time="0.0" ignored="true" displayname="testCalculateFare()" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]/[method:testCalculateFare()]"/>
+    <testcase name="testCalculateFarePost" classname="com.controller.BookingControllerTest" time="0.0" ignored="true" displayname="testCalculateFarePost()" uniqueid="[engine:junit-jupiter]/[class:com.controller.BookingControllerTest]/[method:testCalculateFarePost()]"/>
+  </testsuite>
+</testrun>

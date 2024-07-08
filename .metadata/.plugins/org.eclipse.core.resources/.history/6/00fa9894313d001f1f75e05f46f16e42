@@ -1,0 +1,33 @@
+package com.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class TypeOfCabServiceTest {
+	
+	@Autowired
+	TypeOfCabService ts;
+
+	@Test
+	void testGetPriceFactor() {
+		float factor=ts.getPriceFactor("Standard");
+		assertEquals(factor, (float)1.0);
+		
+		factor=ts.getPriceFactor("Small");
+		assertEquals(factor, (float)0.8);
+		
+		factor=ts.getPriceFactor("Premium");
+		assertEquals(factor, (float)1.2);
+	}
+
+	@Test
+	void testGetCabTypes() {
+		fail("Not yet implemented");
+	}
+
+}

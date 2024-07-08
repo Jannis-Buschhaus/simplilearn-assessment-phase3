@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="JUnitWizards">
+		<item key="NewTestCaseCreationWizardPage.USE_SETUP" value="false"/>
+		<item key="NewTestCaseCreationWizardPage.USE_TEARDOWN" value="false"/>
+		<item key="NewTestCaseCreationWizardPage.USE_SETUPCLASS" value="false"/>
+		<item key="NewTestCaseCreationWizardPage.USE_TEARDOWNCLASS" value="false"/>
+		<item key="NewTestCaseCreationWizardPage.USE_CONSTRUCTOR" value="false"/>
+		<section name="NewTestCaseCreationWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="701"/>
+			<item key="DIALOG_Y_ORIGIN" value="221"/>
+			<item key="DIALOG_WIDTH" value="559"/>
+			<item key="DIALOG_HEIGHT" value="655"/>
+			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|10.0|0|GTK|1|"/>
+		</section>
+		<section name="NewTestSuiteCreationWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="701"/>
+			<item key="DIALOG_Y_ORIGIN" value="221"/>
+			<item key="DIALOG_WIDTH" value="530"/>
+			<item key="DIALOG_HEIGHT" value="502"/>
+			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|10.0|0|GTK|1|"/>
+		</section>
+	</section>
+</section>

@@ -1,0 +1,39 @@
+package com.service;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.entity.Booking;
+
+@SpringBootTest
+class BookingServiceTest {
+
+	@Autowired BookingService bs;
+	
+	@Test
+	void testGetBookings() {
+		assertDoesNotThrow(() -> bs.getBookings());
+	}
+
+	@Test
+	void testStoreBooking() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculateFare() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetBookingsString() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<span th:text="${cabTypes}"></span>
+	<form method="post" action="placeBooking">
+		<label for="email">Email: </label><input type="text" name="email" /><br />
+		<label for="from">From: </label><input type="text" name="email" /><br />
+		<label for="to">To: </label><input type="text" name="email" /><br />
+		<select name="typeOfCab">
+			<div th:each="t:${cabTypes}">
+				<option th:value="${t.cabType}"><span th:text="${t.cabType}"></span></option>
+			</div>
+		</select>
+		<label for="typeOfCab">Type Of Cab: </label><input type="text" name="email" /><br />
+		<button type="submit" value="Submit">Submit</button>
+	</form>
+</body>
+</html>

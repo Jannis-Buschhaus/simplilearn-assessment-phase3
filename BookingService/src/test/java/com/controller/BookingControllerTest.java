@@ -1,0 +1,122 @@
+package com.controller;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.ui.Model;
+import org.springframework.web.client.RestTemplate;
+
+import com.entity.Booking;
+import com.service.BookingService;
+
+@SpringBootTest
+class BookingControllerTest {
+	
+	@Mock
+	BookingService bs;
+	
+	@Mock
+	RestTemplate rt;
+	
+	@Mock
+	Model m;
+	
+	@InjectMocks
+	BookingController bc;
+
+	@Test
+	void testWelcome() {
+		assertEquals(bc.welcome(), "welcome");
+	}
+
+	@Test
+	void testBookingForm() {
+		Mockito.when(rt.getForObject("http://CABFARE/cabfare/cabTypes", List.class)).thenReturn(null);
+		Mockito.when(rt.getForObject("http://CABFARE/cabfare/cabFares", List.class)).thenReturn(null);
+		assertEquals(bc.bookingForm(m), "bookingForm");
+	}
+
+	@Test
+	void testPlaceBooking() {
+		MockHttpServletRequest req = new MockHttpServletRequest();
+		req.setParameter("route", "Airport -> Train Station");
+		req.setParameter("typeOfCab", "Standard");
+		req.setParameter("email", "test@example.com");
+		
+		String[] from_to = req.getParameter("route").split(" -> ");
+
+		Mockito.when(
+					bs.storeBooking(
+						new Booking(
+								req.getParameter("email"),
+								from_to[0],
+								from_to[1],
+								req.getParameter("typeOfCab"),
+								new Timestamp(System.currentTimeMillis())
+								), 
+						req.getParameter("route"), 
+						req.getParameter("typeOfCab")
+					)
+				).thenReturn("Booking submitted. Your cab will arrive shortly");
+		
+		assertEquals("bookingForm", bc.placeBooking(m, req));	
+	}
+
+	@Test
+	void testCalculateFare() {
+		assertEquals("calculateFare", bc.calculateFare(m));
+	}
+
+	@Test
+	void testCalculateFarePost() {
+		MockHttpServletRequest req = new MockHttpServletRequest();
+		req.setParameter("route", "Airport -> Train Station");
+		req.setParameter("typeOfCab", "Standard");
+		
+		Mockito
+			.when(bs.calculateFare(req.getParameter("route"), req.getParameter("typeOfCab")))
+			.thenReturn((float)49.0);
+		
+		assertEquals(bc.calculateFarePost(m, req), "calculateFare");
+	}
+
+	@Test
+	void testListBookings() {
+		assertEquals(bc.listBookings(m), "listBookings");
+	}
+
+	@Test
+	void testListBookingsPost() {
+		MockHttpServletRequest req = new MockHttpServletRequest();
+		req.setParameter("email", "test@example.com");
+		
+		List<Booking> lb = new ArrayList<Booking>();
+		lb.add(
+			new Booking(
+				1,
+				"test@example.com",
+				"Airport",
+				"Train Station",
+				"Standard",
+				(float)49.0,
+				new Timestamp(System.currentTimeMillis())
+			)
+		);
+		
+		Mockito
+			.when(bs.getBookings(req.getParameter("email")))
+			.thenReturn(lb);
+		
+		assertEquals("listBookings", bc.listBookingsPost(m, req));
+	}
+
+}

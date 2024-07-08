@@ -1,0 +1,9 @@
+package com.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.entity.CabFares;
+
+public interface CabFaresRepository extends JpaRepository<CabFares, Integer> {
+
+}

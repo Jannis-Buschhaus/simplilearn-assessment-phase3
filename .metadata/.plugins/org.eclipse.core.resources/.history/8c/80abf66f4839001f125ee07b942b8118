@@ -1,0 +1,47 @@
+package com.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class CabFares {
+
+	@Id
+	private int cabFareId;
+	private String fare_from;
+	private String fare_to;
+	
+	public CabFares() {
+		super();
+	}
+	public CabFares(int cabFareId, String from, String to) {
+		super();
+		this.cabFareId = cabFareId;
+		this.fare_from = from;
+		this.fare_to = to;
+	}
+	
+	public int getCabFareId() {
+		return cabFareId;
+	}
+	public void setCabFareId(int cabFareId) {
+		this.cabFareId = cabFareId;
+	}
+	public String getFrom() {
+		return fare_from;
+	}
+	public void setFrom(String from) {
+		this.fare_from = from;
+	}
+	public String getTo() {
+		return fare_to;
+	}
+	public void setTo(String to) {
+		this.fare_to = to;
+	}
+	
+	@Override
+	public String toString() {
+		return "CabFares [CabFareId=" + cabFareId + ", from=" + fare_from + ", to=" + fare_to + "]";
+	}
+}

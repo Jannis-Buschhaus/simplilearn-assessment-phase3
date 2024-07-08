@@ -1,0 +1,44 @@
+package com.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class BookingControllerTest {
+
+	@Test
+	void testWelcome() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testBookingForm() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testPlaceBooking() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculateFare() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculateFarePost() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testListBookings() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testListBookingsPost() {
+		fail("Not yet implemented");
+	}
+
+}

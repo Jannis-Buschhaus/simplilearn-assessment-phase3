@@ -1,0 +1,65 @@
+package com.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.RestTemplate;
+
+import com.entity.Booking;
+import com.service.BookingService;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+@Controller
+@RequestMapping("/booking")
+public class BookingController {
+	
+	@Autowired
+	BookingService bs;
+	
+	@GetMapping(value="/")
+	public String welcome() {
+		return "welcome";
+	}
+	
+	@GetMapping(value="bookingForm")
+	public String bookingForm(Model m) {
+		RestTemplate rt = new RestTemplate();
+		List<Object> lt = rt.getForObject("http://localhost:8282/cabfare/cabTypes", List.class);
+		m.addAttribute("cabTypes", lt);
+		List<String> cabFares = rt.getForObject("http://localhost:8282/cabfare/cabFares", List.class);
+		m.addAttribute("cabFares", lt);
+		
+		return "bookingForm";
+	}
+	
+	@PostMapping(value="placeBooking")
+	public String placeBooking(Model m, HttpServletRequest req){
+		Booking b = new Booking(
+			req.getParameter("email"),
+			req.getParameter("from"),
+			req.getParameter("to"),
+			req.getParameter("typeOfCab")
+		);
+		
+		//ToDo: get Price from CabFare Microservice and set b.setPrice()
+		
+		
+		
+		m.addAttribute("msg", bs.storeBooking(b));
+		
+		return "bookingForm";
+		
+	}
+	
+	@PostMapping(value="calculateFare")
+	public String calculateFare() {
+		return "calculateFare";
+	}
+	
+}

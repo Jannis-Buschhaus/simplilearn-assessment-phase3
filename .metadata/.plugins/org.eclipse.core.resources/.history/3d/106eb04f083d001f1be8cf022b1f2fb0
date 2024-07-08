@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Calculate your cab fare</title>
+</head>
+<body>
+	<h1>Calculate your cab fare</h1>
+	<form method="post" action="calculateFare">
+		<label for="route">Route: </label>
+		<select name="route">
+			<div th:each="f:${cabFares}">
+				<option th:value="${f}"><span th:text="${f}"></span></option>
+			</div>
+		</select><br />
+		<label for="typeOfCab">Type Of Cab: </label>
+		<select name="typeOfCab">
+			<div th:each="t:${cabTypes}">
+				<option th:value="${t.cabType}"><span th:text="${t.cabType}"></span></option>
+			</div>
+		</select><br />
+		<button type="submit" value="Submit">Submit</button>
+	</form>
+	<div>
+		<span th:text="${price} ? 'Your fare is ${price}' : ''"></span>
+	</div>
+</body>
+</html>

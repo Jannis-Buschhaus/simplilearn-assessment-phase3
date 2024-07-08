@@ -1,0 +1,35 @@
+package com.service;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.CabFares;
+import com.repository.CabFaresRepository;
+
+@Service
+public class CabFaresService {
+	
+	@Autowired
+	CabFaresRepository cr;
+	
+	public List<String> getCabFares(){
+		
+		List<CabFares> lc = cr.findAll();
+		Iterator<CabFares> ii = lc.iterator();
+		List<String> formList=null;
+	
+		while(ii.hasNext()) {
+			CabFares cc = ii.next();
+			formList.add(cc.getFrom()+" -> "+cc.getTo());
+		}
+		return formList;
+	}
+	
+	public String saveCabFare(CabFares cf) {
+		cr.saveAndFlush(cf);
+		return "Cab fare saved.";
+	}
+}

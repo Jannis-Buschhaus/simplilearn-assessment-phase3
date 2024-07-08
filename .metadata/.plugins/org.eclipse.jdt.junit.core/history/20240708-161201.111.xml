@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AllTests" project="CabFare" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.service.AllTests" time="1.057" displayname="AllTests" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]">
+    <testsuite name="JUnit Jupiter" time="1.057" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]/[engine:junit-jupiter]">
+      <testsuite name="com.service.CabFaresServiceTest" time="0.866" displayname="CabFaresServiceTest" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]/[engine:junit-jupiter]/[class:com.service.CabFaresServiceTest]">
+        <testcase name="testGetFarePrice" classname="com.service.CabFaresServiceTest" time="0.723" displayname="testGetFarePrice()" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]/[engine:junit-jupiter]/[class:com.service.CabFaresServiceTest]/[method:testGetFarePrice()]"/>
+        <testcase name="testGetCabFares" classname="com.service.CabFaresServiceTest" time="0.143" displayname="testGetCabFares()" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]/[engine:junit-jupiter]/[class:com.service.CabFaresServiceTest]/[method:testGetCabFares()]"/>
+      </testsuite>
+      <testsuite name="com.service.TypeOfCabServiceTest" time="0.183" displayname="TypeOfCabServiceTest" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]/[engine:junit-jupiter]/[class:com.service.TypeOfCabServiceTest]">
+        <testcase name="testGetPriceFactor" classname="com.service.TypeOfCabServiceTest" time="0.069" displayname="testGetPriceFactor()" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]/[engine:junit-jupiter]/[class:com.service.TypeOfCabServiceTest]/[method:testGetPriceFactor()]"/>
+        <testcase name="testGetCabTypes" classname="com.service.TypeOfCabServiceTest" time="0.113" displayname="testGetCabTypes()" uniqueid="[engine:junit-platform-suite]/[suite:com.service.AllTests]/[engine:junit-jupiter]/[class:com.service.TypeOfCabServiceTest]/[method:testGetCabTypes()]"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,29 @@
+package com.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class BookingServiceTest {
+
+	@Test
+	void testGetBookings() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testStoreBooking() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCalculateFare() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetBookingsString() {
+		fail("Not yet implemented");
+	}
+
+}

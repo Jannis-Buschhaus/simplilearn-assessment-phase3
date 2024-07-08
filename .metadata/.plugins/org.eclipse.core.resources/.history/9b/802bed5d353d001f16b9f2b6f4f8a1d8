@@ -1,0 +1,29 @@
+package com.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CabFareControllerTest {
+
+	@Test
+	void testFactor() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetCabTypes() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetCabFares() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testFarePrice() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,48 @@
+package com.controller;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.mock.web.MockHttpServletRequest;
+
+import com.service.TypeOfCabService;
+
+class CabFareControllerTest {
+	
+	@Mock
+	TypeOfCabService ts;
+	
+	@InjectMocks
+	CabFareController cc;
+
+	@Test
+	void testFactor() {
+		MockHttpServletRequest req = new MockHttpServletRequest();
+		req.setParameter("typeOfCab", "Small");
+		
+		Mockito.when(ts.getPriceFactor(req.getParameter("typeOfCab"))).thenReturn((float)0.8);
+		
+		String result = cc.factor(req);
+		assertEquals(result, "0.8");
+	}
+
+	@Test
+	void testGetCabTypes() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetCabFares() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testFarePrice() {
+		fail("Not yet implemented");
+	}
+
+}

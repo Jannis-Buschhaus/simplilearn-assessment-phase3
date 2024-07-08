@@ -1,0 +1,45 @@
+package com.controller;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.mock.web.MockHttpServletRequest;
+
+import com.service.CabFaresService;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+class CabFareControllerTest {
+	
+	@Mock
+	CabFaresService cs;
+	
+	@InjectMocks
+	CabFareController cc;
+
+	@Test
+	void testFactor() {
+		MockHttpServletRequest req = new MockHttpServletRequest();
+		req.setParameter("typeOfCab", "Small");
+		
+		String result = cc.factor(req);
+	}
+
+	@Test
+	void testGetCabTypes() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetCabFares() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testFarePrice() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,64 @@
+package com.controller;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.service.BookingService;
+
+@SpringBootTest
+class BookingControllerTest {
+	
+	@Mock
+	BookingService bs;
+	
+	@InjectMocks
+	BookingController bc;
+
+	@Test
+	void testWelcome() {
+		assertEquals(bc.welcome(), "welcome");
+	}
+
+	@Test
+	@Disabled
+	void testBookingForm() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	@Disabled
+	void testPlaceBooking() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	@Disabled
+	void testCalculateFare() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	@Disabled
+	void testCalculateFarePost() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	@Disabled
+	void testListBookings() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	@Disabled
+	void testListBookingsPost() {
+		fail("Not yet implemented");
+	}
+
+}

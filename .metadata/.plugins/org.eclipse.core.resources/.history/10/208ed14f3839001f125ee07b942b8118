@@ -1,0 +1,17 @@
+package com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.repository.TypeOfCabRepository;
+
+@Service
+public class TypeOfCabService {
+	
+	@Autowired
+	TypeOfCabRepository tr;
+	
+	public float getPriceFactor(String cabType) {
+		return tr.getPriceFactor(cabType);
+	}
+}
